@@ -1,0 +1,151 @@
+.admin-view {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative; 
+}
+
+.main-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.control-panel {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding-right: 50px; /* 為右側按鈕留出空間 */
+}
+
+.user-list-container {
+    margin-top: 20px; /* 為表格添加上邊距 */
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.user-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list th,
+.user-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.user-list th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.action-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    background-color: #2196F3;
+    color: white;
+}
+
+
+.action-button.add-user {
+    position: absolute;
+    right: 20px; /* 從右邊距離 20px */
+    top: 40px; /* 從上邊距離 20px */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F08080;
+    color: white;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* 確保按鈕在其他元素之上 */
+}
+
+.action-button.add-user:hover {
+    opacity: 0.8;
+}
+
+.action-button.edit {
+    background-color: #2196F3;
+    color: white;
+    margin-right: 5px;
+}
+
+.action-button.delete {
+    background-color: #676f7a;
+    color: white;
+}
+
+.action-button:hover {
+    opacity: 0.8;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    margin-left: 10px;
+}
+
+.error-message {
+    color: #f44336;
+    margin-bottom: 10px;
+}

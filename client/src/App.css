@@ -1,0 +1,93 @@
+/* 其他现有的 CSS */
+
+
+.App {
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header h1 {
+  margin-right: 20px;
+}
+
+
+.header button {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+
+.action-button.logout {
+  background-color: #676f7a;
+  color: white;
+}
+
+
+/* 保持原有的 select-input 样式不变 */
+.select-input {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+/* 针对选择视图的下拉菜单进行单独调整 */
+.select-input-view {
+  width: 33%; /* 修改宽度为适合的值 */
+  padding: 8px; /* 调整内边距使其更加紧凑 */
+  font-size: 16px;
+}
+
+
+/* 其他现有的 CSS */
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

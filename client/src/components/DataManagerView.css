@@ -1,0 +1,385 @@
+/* 全局樣式 */
+.data-manager-view {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 控制面板樣式 */
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.select-container {
+    display: flex;
+    gap: 10px;
+    flex-grow: 0; /* 防止選擇器容器佔據所有可用空間 */
+    margin-right: auto; /* 將選擇器推到左側 */
+}
+
+.select_input {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px; /* 設置固定寬度 */
+}
+
+/* 表格通用樣式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* 電表列表樣式 */
+.meter-list {
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.meter-list-container {
+    position: relative;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.meter-list thead {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.meter-list th, .meter-list td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.meter-list th {
+    font-weight: bold;
+}
+
+.meter-list tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 校區列表樣式 */
+.campus-list-container {
+    position: relative;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+}
+
+.campus-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.campus-list thead {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.campus-list th, .campus-list td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.campus-list th {
+    font-weight: bold;
+}
+
+.campus-list th:last-child,
+.campus-list td:last-child {
+    width: 100px;
+}
+
+.campus-list tbody tr:hover {
+    background-color: #e5e5e5;
+}
+
+/* 按鈕樣式 */
+.action-button {
+    padding: 6px 12px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+
+.action-button:hover {
+    opacity: 0.8;
+}
+
+.action-button.edit,
+.action-button.delete {
+    background-color: #676f7a;
+    color: white;
+}
+
+.action-button.history {
+    background-color: #2196F3;
+    color: white;
+}
+
+.action-button.cancel {
+    background-color: #ccc;
+    color: #333;
+}
+
+.action-button.add-meter,
+.action-button.add-campus {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F08080;
+    color: white;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button.add-meter {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.action-button.add-campus {
+    bottom: 10px;
+}
+
+/* 校區管理區域樣式 */
+.action-section {
+    position: relative;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.action-section-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.action-section-content {
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.section-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* 新增校區表單樣式 */
+.add-campus-container {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.add-campus-form {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.add-campus-form input[type="text"] {
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.add-campus-form button {
+    height: 36px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-campus-form button[type="submit"] {
+    background-color: #2196F3;
+    color: white;
+    margin-right: 5px;
+}
+
+.add-campus-form button.cancel {
+    background-color: #676f7a;
+    color: white;
+}
+
+.add-campus-form button:hover {
+    opacity: 0.8;
+}
+
+/* 模態框樣式 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 表單樣式 */
+.edit-meter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-select,
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-right: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* 其他樣式 */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

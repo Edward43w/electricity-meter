@@ -1,0 +1,22 @@
+/* 按鈕樣式 */
+.action-button {
+    padding: 6px 12px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+
+.action-button.revise,
+.action-button.close {
+    background-color: #676f7a;
+    color: white;
+    margin-top: 10px;
+}
+
+.action-button.close {
+    margin-top: 10px;
+}
