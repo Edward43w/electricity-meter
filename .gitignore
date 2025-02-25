@@ -1,0 +1,8 @@
+# 環境變數
+.env
+
+# 上傳的檔案
+uploads/
+
+# VS Code 設定檔
+.vscode/
